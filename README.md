@@ -5,4 +5,6 @@ Any SIP software compatible with https://github.com/areski/cdr-pusher stores CDR
 - speed/efficiency/scalablity (cdr accounting slows exponentially with each custom rate table)
 - value visibility (if a customer chose a plan to save money, show them on every bill how much money they saved!)
 
-Custom rate tables are much smaller since they only have to store differences. At the end of the billing cycle these saving are calculated againt the charges from the master (most expensive) rate table and itemized on the customer bill as discounts. This code is highly specific to one voip provider's requirements, but the basic design is proven to 400 simultaneous calls on four Westmere cores, and generalizing it will happen the next time a voip provider needs a call accounting solution.
+If a customer has a custom rate through specialized agreements or promotional plans I used a diff rate table. Diff rate tables are much smaller since they only have to store differences between the master rate table. At the end of the billing cycle these savings are calculated againt the charges from the master (most expensive) rate table and itemized on the customer bill as discounts. 
+
+This code is highly specific to one voip provider's requirements, but the basic design is proven to 400 simultaneous calls on four westmere cores, and generalizing it will happen the next time a voip provider needs a call accounting solution.
