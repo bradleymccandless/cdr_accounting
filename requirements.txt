@@ -1,0 +1,12 @@
+pymysql
+requests
+rrdtool
+bs4
+django_auth_ldap
+celery
+django-celery-results
+django-reversion
+python-dateutil
+zeep
+django-celery-beat
+django-celery-results
