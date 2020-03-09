@@ -5,7 +5,7 @@ Any SIP software compatible with [cdr-pusher](https://github.com/areski/cdr-push
 I specifically chose *not* to use a rate table per customer for the following reasons:
 
 - speed/efficiency/scalablity (cdr accounting slows exponentially with each custom rate table)
-- value visibility (if a customer chose a plan to save money, show them on every bill how much money they saved!)
+- value visibility (if a customer chose a plan to save money, show them on every bill how much they saved!)
 - call fraud detection should use the maximum possible value to trigger alerts
 
 If a customer has a custom rate through specialized agreements or a promotional calling plan I use a diff rate table. Diff rate tables are much smaller since they only have to store differences between the master rate table. At the end of the billing cycle these savings are calculated againt the charges from the master (most expensive) rate table and summarized on the customer bill as discounts. 
